@@ -8,6 +8,7 @@ export class ToDoListService {
 
     constructor() {
 
+      this.cargarData();
      }
 
      actualizarData(){
@@ -15,11 +16,19 @@ export class ToDoListService {
      }
 
      cargarData(){
-       this.listas = JSON.parse( localStorage.getItem("data"));
+       if(localStorage.getItem("data")){
+        this.listas = JSON.parse( localStorage.getItem("data"));
+       }
+       
      } 
 
      agregarLista(lista:Lista){
        this.listas.push(lista);
        this.actualizarData();
      }
+
+     eliminarLista(idx:number){
+      this.listas.splice(idx,1);
+      this.actualizarData();
+    }
 }

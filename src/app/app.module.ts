@@ -11,9 +11,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendientesComponent } from "../pages/pendientes/pendientes.component";
 import { TerminadosComponent } from "../pages/terminados/terminados.component";
 import { AgregarComponent } from "../pages/agregar/agregar.component";
+import { DetalleComponent } from "../pages/detalle/detalle.component";
 
 //PIPES
 import { PlaceholderPipe } from "./pipes/placeholder.pipe";
+import { PendientesPipe } from "./pipes/pendientes.pipe";
+
 
 //Servicios 
 import { ToDoListService  } from "./services/todolist.services";
@@ -25,7 +28,9 @@ import { ToDoListService  } from "./services/todolist.services";
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
-    PlaceholderPipe
+    PlaceholderPipe,
+    PendientesPipe,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { ToDoListService  } from "./services/todolist.services";
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
-    AgregarComponent 
+    AgregarComponent,
+    DetalleComponent
   ],
   providers: [
     StatusBar,
